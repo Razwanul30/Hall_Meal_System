@@ -1,90 +1,101 @@
-# Mess Management System (C Project)
+# Student-Mess-Management-System (C Project)
 
-A modular Mess Management System built in **C**, designed for university-level project submission.  
-This project uses **binary file storage**, a **layered architecture**, and separate modules for students, meals, billing, authentication, and file handling.
+A simple and modular **Student Mess Management System** written in
+**C**, designed for university-level projects.\
+It includes **student management**, **meal tracking**,
+**authentication**, and file-based storage with a clean layered
+architecture.
 
-## Features
+------------------------------------------------------------------------
 
-### 1. Student Management
-- Register student  
-- View profile  
-- Update room  
-- Store data in a binary file (`students.bin`)  
-- Functions:
-  - register_student()
-  - get_student_by_roll()
-  - list_all_students()
-  - update_room()
+## 📌 Features
 
-### 2. Meal Management
-- Book meals  
-- Cancel meals  
-- View menu & prices  
-- Dynamic price update by admin  
-- Functions:
-  - book_meal()
-  - cancel_meal()
-  - get_price_for_meal()
-  - display_menu()
+### ✅ 1. Authentication System
 
-### 3. Billing System
-- Individual monthly bill calculation  
-- Monthly summary generation  
-- Balance adjust system  
-- Functions:
-  - calculate_monthly_bill_individual()
-  - generate_monthly_report()
-  - adjust_student_balance()
+-   Username + password login\
+-   Password verification\
+-   File-based storage (`auth.bin`)
 
-### 4. Authentication (Simple)
-- Admin login  
-- Student login by roll number  
-- No password required for student login  
+### ✅ 2. Student Management
 
-### 5. File Handling (Binary Storage)
-- Creates data/ folder automatically  
-- Saves students in binary format  
-- Loads binary data on startup  
-- Functions:
-  - fh_save_students()
-  - fh_load_students()
-  - fh_ensure_data_dir()
+-   Add student\
+-   List students\
+-   Student file storage\
+-   Functions:
+    -   add_student()
+    -   list_students()
+    -   find_student_by_id()
 
-## Project Structure
+### ✅ 3. Meal Management
 
-MessSystem/
-├── main.c  
-├── config.h  
-├── auth/  
-├── student/  
-├── meal/  
-├── billing/  
-├── file_handler/  
-└── data/  
-    └── students.bin  
+-   Add meal entry\
+-   List meals\
+-   Student-wise meal records\
+-   Functions:
+    -   add_meal()
+    -   list_meals()
+    -   list_meals_for_student()
 
-## Compilation
+------------------------------------------------------------------------
 
-```bash
-gcc main.c auth/*.c student/*.c meal/*.c billing/*.c file_handler/*.c -o mess
-````
+## 🧩 Project Structure
 
-Run:
+project/ │ ├── main.c ├── auth/ │ ├── auth.c │ └── auth.h │ ├── student/
+│ ├── student.c │ └── student.h │ ├── meal/ │ ├── meal.c │ └── meal.h │
+├── file_handler/ │ ├── file_handler.c │ └── file_handler.h │ ├──
+config.h └── README.md
 
-```bash
+------------------------------------------------------------------------
+
+## ⚙️ How to Compile
+
+### Linux / Mac:
+
+gcc main.c auth/auth.c student/student.c meal/meal.c
+file_handler/file_handler.c -o mess
+
+### Windows (MinGW):
+
+gcc main.c auth/auth.c student/student.c meal/meal.c
+file_handler/file_handler.c -o mess.exe
+
+------------------------------------------------------------------------
+
+## ▶️ How to Run
+
 ./mess
-```
 
-## Binary Files
+Windows: mess.exe
 
-`data/students.bin` – Stores all student data in binary.
+------------------------------------------------------------------------
 
-## Conclusion
+## 📁 File Storage Format
 
-This project demonstrates modular C programming, binary storage, billing, meal tracking, and admin–student workflow.
-Suitable for academic project submission.
+auth.bin username password
 
-```
+students.bin ID Name
 
----
+meals.bin student_id date meal_count
 
+------------------------------------------------------------------------
+
+## 🚀 Future Improvements
+
+-   Monthly meal calculation\
+-   Cost calculator\
+-   Admin dashboard\
+-   Password hashing\
+-   Export to CSV/JSON
+
+------------------------------------------------------------------------
+
+## ✔️ Conclusion
+
+This is a clean, modular, and fully functional **C-based Student Mess
+Management System**, perfect for university-level project submission.\
+It demonstrates: - File Handling\
+- Modular Programming\
+- Authentication\
+- Structured Data Storage
+
+**Thank you for using this project!**
