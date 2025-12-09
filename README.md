@@ -40,10 +40,29 @@ architecture.
 
 ## 🧩 Project Structure
 
-project/ │ ├── main.c ├── auth/ │ ├── auth.c │ └── auth.h │ ├── student/
-│ ├── student.c │ └── student.h │ ├── meal/ │ ├── meal.c │ └── meal.h │
-├── file_handler/ │ ├── file_handler.c │ └── file_handler.h │ ├──
-config.h └── README.md
+project/
+│
+├── main.c
+│
+├── auth/
+│   ├── auth.c
+│   └── auth.h
+│
+├── student/
+│   ├── student.c
+│   └── student.h
+│
+├── meal/
+│   ├── meal.c
+│   └── meal.h
+│
+├── file_handler/
+│   ├── file_handler.c
+│   └── file_handler.h
+│
+├── config.h
+│
+└── README.md
 
 ------------------------------------------------------------------------
 
